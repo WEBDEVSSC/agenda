@@ -7,7 +7,7 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-//Auth::routes();
+Auth::routes();
 
 //ASI ELIMINAMOS RUTAS
 Auth::routes(['register' => false]);
