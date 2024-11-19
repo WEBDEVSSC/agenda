@@ -305,6 +305,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Mis eventos',
+            'url' => '/misEventos',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'Usuarios',
             'url' => '/users',
             'icon' => 'fas fa-fw fa-user',

@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Calendario de Eventos</h1>
+    <h1><strong>Calendario</strong></h1>
 @stop
 
 @section('content')
@@ -28,7 +28,13 @@
     }
 </style>
 
+<div class="card card-purple card-outline">
+    <div class="card-body">
+
 <div id="calendar"></div>
+
+    </div>
+</div>
 
 <!-- Modal para mostrar detalles del evento -->
 <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
@@ -105,6 +111,10 @@
     });
 </script>
 
+@stop
+
+@section('footer')
+<p>Copyright © <?php echo date('Y') ?> <strong>Servicios de Salud de Coahuila de Zaragoza</strong> <small>Unidad de Planeación (Departamento de Tecnologías de la Información)</small></p>
 @stop
 
 @section('css')

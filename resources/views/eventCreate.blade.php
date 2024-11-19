@@ -3,10 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Calendario de Eventos</h1>
+    <h1><strong>Nuevo registro</strong></h1>
 @stop
 
 @section('content')
+
+<div class="card card-purple card-outline">
+    <div class="card-body">
 
 <form action="{{ route('eventStore') }}" method="POST">
 
@@ -127,6 +130,10 @@
 
      <button type="submit" class="btn btn-dark">Registrar evento</button>
 </form>
+
+    </div>
+
+</div>
 
 @stop
 
