@@ -5,7 +5,7 @@
 <p>Se ha registrado un nuevo evento en la plataforma Agenda SSC</p>
 
 <x-mail::panel>
-<p>Nombre del evento</p>
+<p><strong>Nombre del evento</strong> : {{$evento->title}}</p>
 <p>Area que organiza</p>
 <p>Subdirección</p>
 </x-mail::panel>

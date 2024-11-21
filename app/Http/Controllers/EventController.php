@@ -104,7 +104,7 @@ class EventController extends Controller
 
         // Enviamos el correo de alerta sobre el nuevo evento
         $destinatarios = ['cesartorres.1688@gmail.com'];
-        Mail::to($destinatarios)->send(new NuevoEventoMail());
+        Mail::to($destinatarios)->send(new NuevoEventoMail($evento));
 
         // Redireccionamos a la vista
         return redirect()->route('calendar')->with('success', 'El evento se registro correctamente');

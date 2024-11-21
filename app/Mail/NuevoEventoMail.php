@@ -14,16 +14,15 @@ class NuevoEventoMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $evento;
+
+    // Puedes pasarle datos al constructor
+    public function __construct($evento)
     {
-        //
+        $this->evento = $evento;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
+    
     public function build()
     {
         return $this->markdown('emails.nuevo-evento') // la vista del correo
