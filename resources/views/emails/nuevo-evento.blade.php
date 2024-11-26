@@ -6,8 +6,10 @@
 
 <x-mail::panel>
 <p><strong>Nombre del evento</strong> : {{$evento->title}}</p>
-<p>Area que organiza</p>
-<p>Subdirección</p>
+<p><strong>Sede</strong> : {{$evento->location}}</p>
+<p><strong>Area que organiza</strong> : {{$evento->organize}}</p>
+<p><strong>Subdirección</strong> : {{$evento->category_label}}</p>
+<p><strong>Fecha</strong> : {{$evento->start}} - {{ $evento->end }}</p>
 </x-mail::panel>
 
 </x-mail::message>
