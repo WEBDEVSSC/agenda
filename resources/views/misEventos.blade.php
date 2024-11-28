@@ -31,7 +31,7 @@
                         <td>{{ \Carbon\Carbon::parse($evento->start)->format('d-m-Y H:i') }} <br> {{ \Carbon\Carbon::parse($evento->end)->format('d-m-Y H:i') }}</td>
                         <td>{{ $evento->location }}</td>
                         <td>{{ $evento->organize }}</td>
-                        <td>{{ $evento->description }}</td>
+                        <td>{!! $evento->description !!}</td>
                         <td>
 
                         <div class="btn-group" role="group">
