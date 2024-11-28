@@ -48,21 +48,21 @@
         <div class="row mt-3">
             <div class="col-md-12">
                 <p><strong>Descripción</strong></p>
-                <p>{{ $event->description; }}</p>
+                <p>{!! $event->description; !!}</p>
             </div>
         </div>
 
         <div class="row mt-3">
             <div class="col-md-12">
                 <p><strong>Participación de autoridades SSC</strong></p>
-                <p>{{ $event->authority_ss; }}</p>
+                <p>{!! $event->authority_ss; !!}</p>
             </div>
         </div>
 
         <div class="row mt-3">
             <div class="col-md-12">
                 <p><strong>Participación de autoridades externas</strong></p>
-                <p>{{ $event->authority_ext; }}</p>
+                <p>{!! $event->authority_ext; !!}</p>
             </div>
         </div>
 

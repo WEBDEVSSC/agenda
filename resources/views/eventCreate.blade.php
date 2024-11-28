@@ -85,7 +85,7 @@
                 
                 <div class="form-group">
                     <label for="descripcion">Descripcion:</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control" rows="5">{{ old('descripcion') }}</textarea>
+                    <textarea name="descripcion" id="descripcion" class="form-control" rows="10">{{ old('descripcion') }}</textarea>
                     <!-- MOSTRAMOS EL ERROR EN CASO DE QUE EXISTA -->
                     @error('descripcion')
                         <div class="alert alert-danger">{{ $message }}</div>
@@ -101,7 +101,7 @@
                 
                 <div class="form-group">
                     <label for="participacion_autoridades_ss">Participación de autoridades SSC:</label>
-                    <textarea name="participacion_autoridades_ss" id="participacion_autoridades_ss" class="form-control" rows="5">{{ old('descripcion') }}</textarea>
+                    <textarea name="participacion_autoridades_ss" id="participacion_autoridades_ss" class="form-control" rows="10">{{ old('descripcion') }}</textarea>
                     <!-- MOSTRAMOS EL ERROR EN CASO DE QUE EXISTA -->
                     @error('participacion_autoridades_ss')
                         <div class="alert alert-danger">{{ $message }}</div>
@@ -117,7 +117,7 @@
                 
                 <div class="form-group">
                     <label for="participacion_autoridades_ext">Participación de autoridades ext:</label>
-                    <textarea name="participacion_autoridades_ext" id="participacion_autoridades_ext" class="form-control" rows="5">{{ old('descripcion') }}</textarea>
+                    <textarea name="participacion_autoridades_ext" id="participacion_autoridades_ext" class="form-control" rows="10">{{ old('descripcion') }}</textarea>
                     <!-- MOSTRAMOS EL ERROR EN CASO DE QUE EXISTA -->
                     @error('participacion_autoridades_ext')
                         <div class="alert alert-danger">{{ $message }}</div>
@@ -138,10 +138,45 @@
 @stop
 
 @section('css')
-    {{-- Add here extra stylesheets --}}
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.css" rel="stylesheet">
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#descripcion').summernote();
+            $('#participacion_autoridades_ss').summernote();
+            $('#participacion_autoridades_ext').summernote();
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        // Inicialización básica de Summernote para los campos
+        $('#descripcion').summernote({
+            height: 200, // Altura del editor
+            lang: 'es-ES', // Idioma español
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'italic', 'underline']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['link', 'picture']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+
+        $('#participacion_autoridades_ss').summernote({
+            height: 150, // Puedes usar diferentes configuraciones para cada editor
+            lang: 'es-ES'
+        });
+
+        $('#participacion_autoridades_ext').summernote({
+            height: 150,
+            lang: 'es-ES'
+        });
+    });
+</script>
 @stop

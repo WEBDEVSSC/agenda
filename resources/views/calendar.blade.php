@@ -2,11 +2,26 @@
 
 @section('title', 'Dashboard')
 
+@section('plugins.Sweetalert2', true)
+
 @section('content_header')
     <h1><strong>Calendario</strong></h1>
 @stop
 
 @section('content')
+
+@if(session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                title: 'Éxito',
+                text: "{{ session('success') }}",
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
+        });
+    </script>
+@endif
 
 <!-- Incluye los estilos de FullCalendar -->
 <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet">
